@@ -24,6 +24,7 @@ export default class App extends Component {
     //we need to make sure the user is loaded when the application starts up by setting the user on component mount;
     async componentDidMount() {
       let user = localStorage.getItem("user");
+      const products = await axios.get('http://localhost:3001/products');
       user = user ? JSON.parse(user) : null;
       this.setState({ user });
     }

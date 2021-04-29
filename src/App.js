@@ -26,8 +26,13 @@ export default class App extends Component {
       let user = localStorage.getItem("user");
       const products = await axios.get('http://localhost:3001/products');
       user = user ? JSON.parse(user) : null;
-      this.setState({ user });
+      this.setState({ user,products:products.data });
     }
+    addProduct = (product, callback) => {
+      let products = this.state.products.slice();
+      products.push(product);
+      this.setState({ products }, () => callback && callback());
+    };
 
     login = async (email, password) => {
       const res = await axios.post(

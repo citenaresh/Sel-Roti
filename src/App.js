@@ -7,6 +7,8 @@ import Login from './components/Login';
 import ProductList from './components/ProductList';
 
 import Context from "./Context";
+import axios from 'axios';
+import jwt_decode from 'jwt-decode';
 
 export default class App extends Component {
   constructor(props) {

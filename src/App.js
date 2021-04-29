@@ -21,6 +21,45 @@ export default class App extends Component {
     this.routerRef = React.createRef();
   }
 
+    //we need to make sure the user is loaded when the application starts up by setting the user on component mount;
+    async componentDidMount() {
+      let user = localStorage.getItem("user");
+      user = user ? JSON.parse(user) : null;
+      this.setState({ user });
+    }
+
+    login = async (email, password) => {
+      const res = await axios.post(
+        'http://localhost:3001/login',
+        { email, password },
+      ).catch((res) => {
+        return { status: 401, message: 'Unauthorized' }
+      })
+    
+      if(res.status === 200) {
+        const { email } = jwt_decode(res.data.accessToken)
+        const user = {
+          email,
+          token: res.data.accessToken,
+          accessLevel: email === 'admin@example.com' ? 0 : 1
+        }
+    
+        this.setState({ user });
+        localStorage.setItem("user", JSON.stringify(user));
+        return true;
+      } else {
+        return false;
+      }
+    }
+    
+    logout = e => {
+      e.preventDefault();
+      this.setState({ user: null });
+      localStorage.removeItem("user");
+    };
+
+  
+
   render() {
     return (
       <Context.Provider

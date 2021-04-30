@@ -3,3 +3,9 @@
 "dbURI": "my(naresh)_DATABASE_URI"
 
 }
+
+{
+    "dbURI": "my(naresh)_DATABASE_URI",
+    "jwtsecret": "my(naresh) jwt secret",
+    "StripeAPIKey": "my(naresh) STRIPE SECRET API KEY"
+}

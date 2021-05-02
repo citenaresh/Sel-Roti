@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const { isEmail } = require('validator');
 
-// creating user schema
 const UserSchema = new Schema({
     name: {
         type: String,
@@ -25,4 +24,5 @@ const UserSchema = new Schema({
         default: Date.now
     }
 })
+
 module.exports = User = mongoose.model('user',UserSchema);

@@ -4,10 +4,12 @@ const Schema = mongoose.Schema;
 const CartSchema = new Schema({
     userId: {
         type: String,
+        ref: "user"
     },
     items: [{
         productId: {
             type: String,
+            ref: "item"
         },
         name: String,
         quantity: {
@@ -24,4 +26,5 @@ const CartSchema = new Schema({
         default: 0
     }
 });
-module.exports = Cart = mongoose.model(‘cart’ ,CartSchema);
+
+module.exports = Cart = mongoose.model('cart',CartSchema);

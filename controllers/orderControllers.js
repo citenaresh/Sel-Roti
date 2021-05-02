@@ -4,13 +4,11 @@ const User = require('../models/User');
 const config = require('config');
 const stripe = require('stripe')(config.get('StripeAPIKey'));
 
-//fetch the ORDERS
 module.exports.get_orders = async (req,res) => {
     const userId = req.params.id;
     Order.find({userId}).sort({date:-1}).then(orders => res.json(orders));
 }
 
-//CHECKOUT the order
 module.exports.checkout = async (req,res) => {
     try{
         const userId = req.params.id;
@@ -21,7 +19,7 @@ module.exports.checkout = async (req,res) => {
         if(cart){
             const charge = await stripe.charges.create({
                 amount: cart.bill,
-                currency: 'aud',
+                currency: 'inr',
                 source: source,
                 receipt_email: email
             })

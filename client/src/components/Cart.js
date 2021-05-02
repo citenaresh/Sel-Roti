@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCart, deleteFromCart } from '../actions/cartActions';
 import Checkout from './Checkout';
-import { checkout } from '../actions/orderActions';
-
+import { checkout } from '../actions/orderActions'
+;
 class Cart extends Component {
 
     state = {

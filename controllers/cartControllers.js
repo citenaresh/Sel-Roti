@@ -1,7 +1,6 @@
 const Cart = require('../models/Cart');
 const Item = require('../models/Item');
 
-//function for GETTING ITEMS from the cart to display
 module.exports.get_cart_items = async (req,res) => {
     const userId = req.params.id;
     try{
@@ -15,11 +14,10 @@ module.exports.get_cart_items = async (req,res) => {
     }
     catch(err){
         console.log(err);
-        res.status(500).send("Something went wrong");//server encountered an unexpected condition that prevented it from fulfilling the request
+        res.status(500).send("Something went wrong");
     }
 }
 
-//ADDING ITEMS to the cart
 module.exports.add_cart_item = async (req,res) => {
     const userId = req.params.id;
     const { productId, quantity } = req.body;
@@ -67,7 +65,6 @@ module.exports.add_cart_item = async (req,res) => {
     }
 }
 
-//DELETE ITEM from cart
 module.exports.delete_item = async (req,res) => {
     const userId = req.params.userId;
     const productId = req.params.itemId;

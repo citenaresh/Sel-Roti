@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="style.css">
+    <title>Sell-Roti</title>
+
+
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+           <div class="brand">
+               <button onclick="openMenu()">
+                   &#9776
+               </button>
+               <a href="index.html">Sell-Roti</a>
+           </div>
+           <div class="header-links">
+                <a href="cart.html">Cart</a>
+                <a href="signin.html">Sign In</a>
+
+           </div>
+        </header>
+        <aside class="sidebar">
+           <h3>Categories</h3>
+           <button class="sidebar-close-button" onclick="closeMenu()">X</button>
+           <ul>
+               <li>
+                   <a href="index.html">Sel-Roti</a>
+               </li>
+               <li>
+                <a href="index.html">Momo</a>
+            </li>
+           </ul>
+        </aside>
+        <main class="main">
+            <div class="content">
+              <ul class="products">
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="./images/selroti.jpg" alt="Sell Roti, Yum Yum" >
+                        <div class="product-name">
+                            <a href="product.html">Sell Roti</a> 
+                        </div>
+                        <div class="product-brand">Pokhareli</div>
+                        <div class="product-price">$2.99</div>
+                        <div class="product-rating">4.5 Stars (30 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="./images/momo.jpg" alt="Momo, the best" >
+                        <div class="product-name">
+                            <a href="product.html">Momo (Delicious Dumpling)</a> 
+                        </div>
+                        <div class="product-brand">Kathmandu</div>
+                        <div class="product-price">$13.99</div>
+                        <div class="product-rating">5 Stars (20 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="./images/samosa.jpg" alt="samosa, The snack" >
+                        <div class="product-name">
+                            <a href="product.html">Samosa</a> 
+                        </div>
+                        <div class="product-brand">Trident</div>
+                        <div class="product-price">$2.49</div>
+                        <div class="product-rating">4.0 Stars (20 Reviews)</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="./images/sauce.jpg" alt="the spicy sauce" >
+                        <div class="product-name">
+                            <a href="product.html">Devil Sauce</a> 
+                        </div>
+                        <div class="product-brand">The Hulk</div>
+                        <div class="product-price">$0.49</div>
+                        <div class="product-rating">5 Stars (15 Reviews)</div>
+                    </div>
+                </li>
+                
+            </ul>  
+            </div>
+            
+        </main>
+        <footer class="footer">
+            All right reserved @ Naresh Raj Poudel (Sell-Roti.com)
+        </footer>
+    </div>
+    <script>
+        function openMenu(){
+            document.querySelector(".sidebar").classList.add("open");
+        }
+
+        function closeMenu(){
+            document.querySelector(".sidebar").classList.remove("open");
+        }
+
+    </script>
+</body>
+</html>

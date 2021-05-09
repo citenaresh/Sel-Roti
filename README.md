@@ -12,7 +12,7 @@ The user can order the food item by clicking on it and adding to the cart
 
 HOMESCREEN
 
-<img src="/public/images/homescreen.png">
+<img src="frontend/public/images/homescreen.png">
 
 REGISTER
 

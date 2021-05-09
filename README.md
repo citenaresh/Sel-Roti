@@ -16,15 +16,15 @@ HOMESCREEN
 
 REGISTER
 
-<img src="/public/images/register.png">
+<img src="frontend/public/images/register.png">
 
 SIGNIN
 
-<img src="/public/images/signin.png">
+<img src="frontend/public/images/signin.png">
 
 CART
 
-<img src="/public/images/cart.png">
+<img src="frontend/public/images/cart.png">
 
 
 

@@ -9,9 +9,9 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "install": "cd client && npm ci",
-    "asd": "cd client && npm run build",
-    "heroku-postbuild": "npm run asd"
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run builf"
   },
   "author": "Naresh Raj Poudel",
   "license": "ISC",

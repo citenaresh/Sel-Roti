@@ -42,7 +42,7 @@ CART
 
 ## Installation
 
-For installation clon the repo and install dependencies on the root folder. Change directory to "frontend" and install dependencies (for react) go back to root folder and run the command "npm start" do same inside the frontend folder as well. The page will start in localhost with port 3000
+For installation clone the repo and install dependencies on the root folder. Change directory to "frontend" and install dependencies (for react) go back to root folder and run the command "npm start" do same inside the frontend folder as well. The page will start in localhost with port 3000
 
 
 ## License
@@ -72,7 +72,7 @@ For installation clon the repo and install dependencies on the root folder. Chan
 
 ## Live_App
 
-* You can view the live app on heroku at (https://heroku).
+* You can view the live app on heroku at (https://selroti.herokuapp.com/): https://selroti.herokuapp.com/
 
 
 ## Authors

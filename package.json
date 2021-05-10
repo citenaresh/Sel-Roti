@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "selroti the popular Nepali food",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
     "build": "cd frontend && npm install && npm run build"

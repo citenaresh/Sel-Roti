@@ -5,9 +5,9 @@
   "description": "selroti the popular Nepali food",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
-    "build": "cd frontend && npm install && npm run build"
-  },
+    "build": "cd frontend && npm install && npm run build",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+   },
   "author": "Naresh Raj Poudel",
   "license": "ISC",
   "dependencies": {

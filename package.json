@@ -1,6 +1,5 @@
 {
   "name": "selroti",
-  "type": "module",
   "version": "1.0.0",
   "description": "selroti the popular Nepali food",
   "main": "server.js",

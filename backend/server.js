@@ -24,7 +24,7 @@ app.use('/api/products', productRouter);
   //res.send('Server is ready');
 //});
 
-const _dirname=path.resolve();
+const __dirname =path.resolve();
 
 app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>

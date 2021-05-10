@@ -19,15 +19,19 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/selroti', {
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
-app.get('/', (req, res) => {
-  res.send('Server is ready');
-});
+
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-const port = process.env.PORT || 5000;
+
+
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Serve at http://localhost:${port}`);
 });

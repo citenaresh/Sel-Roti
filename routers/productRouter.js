@@ -2,11 +2,12 @@ import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
 import Product from '../models/productModel.js';
+import path from "path";
 
 const productRouter = express.Router();
 
 productRouter.get(
-  '/',
+  '/abc',
   expressAsyncHandler(async (req, res) => {
     const products = await Product.find({});
     res.send(products);
@@ -33,5 +34,9 @@ productRouter.get(
     }
   })
 );
+
+productRouter.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 export default productRouter;

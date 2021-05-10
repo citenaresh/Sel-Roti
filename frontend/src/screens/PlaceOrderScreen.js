@@ -8,15 +8,15 @@ export default function PlaceOrderScreen(props) {
   if (!cart.paymentMethod) {
     props.history.push('/payment');
   }
-  const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
+  const toPrice = (num) => Number(num.toFixed(2)); // 11.314 => "11.31" => 11.31
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
-  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
-  cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
+  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(5);
+  cart.taxPrice = toPrice(0.10 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
   const placeOrderHandler = () => {
-    // TODO: dispatch place order action
+    
   };
   return (
     <div>
@@ -31,7 +31,6 @@ export default function PlaceOrderScreen(props) {
                   <strong>Name:</strong> {cart.shippingAddress.fullName} <br />
                   <strong>Address: </strong> {cart.shippingAddress.address},
                   {cart.shippingAddress.city}, {cart.shippingAddress.postalCode}
-                  ,{cart.shippingAddress.country}
                 </p>
               </div>
             </li>

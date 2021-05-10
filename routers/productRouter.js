@@ -35,8 +35,6 @@ productRouter.get(
   })
 );
 
-productRouter.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+
 
 export default productRouter;

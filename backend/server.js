@@ -14,6 +14,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/selroti', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify:false
 });
 
 app.use('/api/users', userRouter);

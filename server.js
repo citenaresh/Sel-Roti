@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+import path from "path";
 
 dotenv.config();
 
@@ -19,6 +20,10 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/selroti', {
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
+app.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
 
 
 if (process.env.NODE_ENV === "production") {

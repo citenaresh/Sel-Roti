@@ -28,7 +28,7 @@ CART
 
 
 
-## [Live App](https://heroku/)   (https://heroku)
+## [Live App](https://selroti.herokuapp.com/)   (https://selroti.herokuapp.com/)
 
 ## Table of Contents
 

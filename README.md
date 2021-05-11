@@ -72,7 +72,7 @@ For installation clone the repo and install dependencies on the root folder. Cha
 
 ## Live_App
 
-* You can view the live app on heroku at (https://selroti.herokuapp.com/): (https://selroti.herokuapp.com/)
+* You can view the live app on heroku at (https://selroti.herokuapp.com/): https://selroti.herokuapp.com/
 
 
 ## Authors
